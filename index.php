@@ -58,8 +58,8 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <div class="logo">
-                                    <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-                                        <img src="images/logo.png" alt="">
+                                    <a class="navbar-brand js-scroll-trigger logo-header" href="index.php">
+                                        <img src="images/logo.png" alt="" height="70px" width="160px">
                                     </a>
                                 </div>
                             </div>
