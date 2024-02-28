@@ -11,14 +11,11 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 
     <!-- Site Metas -->
-    <title>Food Funday Restaurant - One page HTML Responsive</title>
+    <title>York Burger & Pizza</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -59,7 +56,7 @@
                                 </button>
                                 <div class="logo">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="index.php">
-                                        <img src="images/logo.png" alt="" height="60px" width="160px">
+                                        <img src="images/logo.png" alt="" height="60px" width="160px" style="margin-top: -10px">
                                     </a>
                                 </div>
                             </div>
@@ -68,10 +65,7 @@
                                     <li class="active"><a href="#banner">Home</a></li>
                                     <li><a href="#about">About us</a></li>
                                     <li><a href="#menu">Menu</a></li>
-                                    
                                     <li><a href="#gallery">Gallery</a></li>
-                                    
-                                    <li><a href="#pricing">pricing</a></li>
                                     <li><a href="#reservation">Reservaion</a></li>
                                     <li><a href="#footer">Contact us</a></li>
                                 </ul>
@@ -95,15 +89,12 @@
                 <div class="banner-static">
                     <div class="banner-text">
                         <div class="banner-cell">
-                            <h1>Dinner with us  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Friends:Family:Officemates" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
-                            <h2>Accidental appearances </h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh euismod</p>
+                            <h1>Experience our  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Burgers:Pizzas:Fries:Drinks" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h2 class="text-success">Halal Foods </h2>
+                            <p>Experience the Fusion of Authenticity and Taste, Where Halal Meets Gourmet in Every Bite!</p>
                             <div class="book-btn">
-                                <a href="#reservation" class="table-btn hvr-underline-from-center">Book my Table</a>
+                                <a onclick="window.location.href='tel:+1-416-243-3034'" class="table-btn hvr-underline-from-center">Call for order</a>
                             </div>
-                            <a href="#about">
-                                <div class="mouse"></div>
-                            </a>
                         </div>
                         <!-- end banner-cell -->
                     </div>
@@ -670,103 +661,7 @@
     <!-- end gallery-main -->
 
 
-    <div id="pricing" class="pricing-main pad-top-100 pad-bottom-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h2 class="block-title text-center">
-						Pricing 	
-					</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut orci varius, elementum lectus nec, aliquam lectus. Duis neque augue, maximus in sapien ut, porta pharetra odio.</p>
-                </div>
-                <div class="panel-pricing-in">
-                    <!-- item -->
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <div class="panel panel-pricing">
-                            <div class="panel-heading">
-                                <div class="pric-icon">
-                                    <img src="images/store.png" alt="" />
-                                </div>
-                                <h3>Basic</h3>
-                            </div>
-                            <div class="panel-body text-center">
-                                <p><strong>$30/<span>Month</span></strong></p>
-                            </div>
-                            <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 10 GB Bandwidth</li>
-                                <li class="list-group-item"><i class="fa fa-times"></i> 2GB Storage</li>
-                                <li class="list-group-item"><i class="fa fa-times"></i> Offline work</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
-                            </ul>
-                            <div class="panel-footer">
-                                <a class="btn btn-lg btn-block hvr-underline-from-center" href="#">Purchase Now!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
 
-                    <!-- item -->
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <div class="panel panel-pricing">
-                            <div class="panel-heading">
-                                <div class="pric-icon">
-                                    <img src="images/food.png" alt="" />
-                                </div>
-                                <h3>Pro</h3>
-                            </div>
-                            <div class="panel-body text-center">
-                                <p><strong>$60/<span>Month</span></strong></p>
-                            </div>
-                            <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 50 GB Bandwidth</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 2GB Storage</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Offline work</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
-                            </ul>
-                            <div class="panel-footer">
-                                <a class="btn btn-lg btn-block hvr-underline-from-center" href="#">Purchase Now!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-
-                    <!-- item -->
-                    <div class="col-md-4 col-sm-4 text-center">
-                        <div class="panel panel-pricing">
-                            <div class="panel-heading">
-                                <div class="pric-icon">
-                                    <img src="images/coffee.png" alt="" />
-                                </div>
-                                <h3>Platinum</h3>
-                            </div>
-                            <div class="panel-body text-center">
-                                <p><strong>$90/<span>Month</span></strong></p>
-                            </div>
-                            <ul class="list-group text-center">
-                                <li class="list-group-item"><i class="fa fa-check"></i> One Website</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> One User</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 100 GB Bandwidth</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 2GB Storage</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> Offline work</li>
-                                <li class="list-group-item"><i class="fa fa-check"></i> 24x7 Support</li>
-                            </ul>
-                            <div class="panel-footer">
-                                <a class="btn btn-lg btn-block hvr-underline-from-center" href="#">Purchase Now!</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /item -->
-                </div>
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end pricing-main -->
 
     <div id="reservation" class="reservations-main pad-top-100 pad-bottom-100">
         <div class="container">
@@ -866,7 +761,7 @@
     <!-- end reservations-main -->
 
     <div id="footer" class="footer-main">
-        <div class="footer-news pad-top-100 pad-bottom-70 parallax">
+        <!-- <div class="footer-news pad-top-100 pad-bottom-70 parallax">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -879,12 +774,13 @@
                             <a href="#" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
                         </form>
                     </div>
-                    <!-- end col -->
+                   
                 </div>
-                <!-- end row -->
+               
             </div>
-            <!-- end container -->
-        </div>
+            
+        </div> -->
+        
         <!-- end footer-news -->
         <div class="footer-box pad-top-70">
             <div class="container">
@@ -892,7 +788,7 @@
                     <div class="footer-in-main">
                         <div class="footer-logo">
                             <div class="text-center">
-                                <img src="images/logo.png" alt="" />
+                                <img src="images/logo.png" alt="" width="250px" height="100px"/>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -988,6 +884,10 @@
                 </div>
                 <!-- end row -->
             </div>
+            <div class="ml-5 mr-5 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.107956378865!2d-79.49641721578733!3d43.6875189757098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37d039b6ef7d%3A0xeca38ab0bb142e84!2sYork%20Burger%20%26%20Pizza%20(Halal)!5e0!3m2!1sen!2sbd!4v1709116848081!5m2!1sen!2sbd" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <br>
             <!-- end container -->
             <div id="copyright" class="copyright-main">
                 <div class="container">
@@ -1007,18 +907,6 @@
     <!-- end footer-main -->
 
     <a href="#" class="scrollup" style="display: none;">Scroll</a>
-
-    <section id="color-panel" class="close-color-panel">
-        <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
-        <!-- Colors -->
-        <div class="segment">
-            <h4 class="gray2 normal no-padding">Color Scheme</h4>
-            <a title="orange" class="switcher orange-bg"></a>
-            <a title="strong-blue" class="switcher strong-blue-bg"></a>
-            <a title="moderate-green" class="switcher moderate-green-bg"></a>
-            <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
-        </div>
-    </section>
 
     <!-- ALL JS FILES -->
     <script src="js/all.js"></script>
