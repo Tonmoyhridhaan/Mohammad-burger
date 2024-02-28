@@ -43,7 +43,7 @@
     <div id="loader">
         <div id="status"></div>
     </div>
-    <div id="site-header">
+    <div id="site-header mb-5">
         <header id="header" class="header-block-top">
             <div class="container">
                 <div class="row">
@@ -59,7 +59,7 @@
                                 </button>
                                 <div class="logo">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="index.php">
-                                        <img src="images/logo.png" alt="" height="70px" width="160px">
+                                        <img src="images/logo.png" alt="" height="60px" width="160px">
                                     </a>
                                 </div>
                             </div>
@@ -68,9 +68,9 @@
                                     <li class="active"><a href="#banner">Home</a></li>
                                     <li><a href="#about">About us</a></li>
                                     <li><a href="#menu">Menu</a></li>
-                                    <li><a href="#our_team">Team</a></li>
+                                    
                                     <li><a href="#gallery">Gallery</a></li>
-                                    <li><a href="#blog">Blog</a></li>
+                                    
                                     <li><a href="#pricing">pricing</a></li>
                                     <li><a href="#reservation">Reservaion</a></li>
                                     <li><a href="#footer">Contact us</a></li>
@@ -445,84 +445,7 @@
     </div>
     <!-- end menu -->
 
-    <div id="our_team" class="team-main pad-top-100 pad-bottom-100 parallax">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title text-center">
-						Our Team 	
-					</h2>
-                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                    </div>
-                    <div class="team-box">
-
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="sf-team">
-                                    <div class="thumb">
-                                        <a href="#"><img src="images/staff-01.jpg" alt=""></a>
-                                    </div>
-                                    <div class="text-col">
-                                        <h3>John Doggett</h3>
-                                        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="sf-team">
-                                    <div class="thumb">
-                                        <a href="#"><img src="images/staff-02.jpg" alt=""></a>
-                                    </div>
-                                    <div class="text-col">
-                                        <h3>Jeffrey Spender</h3>
-                                        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-md-4 col-sm-6">
-                                <div class="sf-team">
-                                    <div class="thumb">
-                                        <a href="#"><img src="images/staff-03.jpg" alt=""></a>
-                                    </div>
-                                    <div class="text-col">
-                                        <h3>Monica Reyes</h3>
-                                        <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Aenean commodo ligula.</p>
-                                        <ul class="team-social">
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
-
-                    </div>
-                    <!-- end team-box -->
-
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end team-main -->
+  
 
     <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
         <div class="container">
@@ -746,101 +669,6 @@
     </div>
     <!-- end gallery-main -->
 
-    <div id="blog" class="blog-main pad-top-100 pad-bottom-100 parallax">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h2 class="block-title text-center">
-					Our Blog 	
-				</h2>
-                    <div class="blog-box clearfix">
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="blog-img-box">
-                                        <img src="images/featured-image-01.jpg" alt="" />
-                                        <div class="overlay">
-                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="blog-dit">
-                                        <p><span>25 NOVEMBER, 2014</span></p>
-                                        <h2>LATEST RECIPES JUST IN!</h2>
-                                        <h5>BY John Doggett</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="blog-img-box">
-                                        <img src="images/featured-image-02.jpg" alt="" />
-                                        <div class="overlay">
-                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="blog-dit">
-                                        <p><span>2 NOVEMBER, 2014</span></p>
-                                        <h2>NEW RECRUITS HAVE ARRIVED!</h2>
-                                        <h5>BY Jeffrey Spender</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="blog-img-box">
-                                        <img src="images/featured-image-03.jpg" alt="" />
-                                        <div class="overlay">
-                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="blog-dit">
-                                        <p><span>4 NOVEMBER, 2014</span></p>
-                                        <h2>BAKING TIPS FROM THE PROS</h2>
-                                        <h5>BY Monica Reyes</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="blog-block">
-                                    <div class="blog-img-box">
-                                        <img src="images/featured-image-04.jpg" alt="" />
-                                        <div class="overlay">
-                                            <a href=""><i class="fa fa-link" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="blog-dit">
-                                        <p><span>12 NOVEMBER, 2014</span></p>
-                                        <h2>ALL YOUR EGGS BELONG TO US</h2>
-                                        <h5>BY John Doggett</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                    </div>
-                    <!-- end blog-box -->
-
-                    <div class="blog-btn-v">
-                        <a class="hvr-underline-from-center" href="#">View the Blog</a>
-                    </div>
-
-                </div>
-                <!-- end col -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end blog-main -->
 
     <div id="pricing" class="pricing-main pad-top-100 pad-bottom-100">
         <div class="container">
