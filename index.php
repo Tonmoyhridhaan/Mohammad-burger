@@ -242,21 +242,21 @@
                     </div>
                     <div class="tab-menu">
                         <div class="slider slider-nav">
-                            <div class="tab-title-menu">
-                                <h2>STARTERS</h2>
-                                <p> <i class="flaticon-canape"></i> </p>
+                            <div class="tab-title-menu ml-5">
+                                <h2>PIZZAS</h2>
+                                
                             </div>
                             <div class="tab-title-menu">
-                                <h2>MAIN DISHES</h2>
-                                <p> <i class="flaticon-dinner"></i> </p>
+                                <h2>BURGERS</h2>
+                               
                             </div>
                             <div class="tab-title-menu">
-                                <h2>DESERTS</h2>
-                                <p> <i class="flaticon-desert"></i> </p>
+                                <h2>SIDES</h2>
+                               
                             </div>
                             <div class="tab-title-menu">
                                 <h2>DRINKS</h2>
-                                <p> <i class="flaticon-coffee"></i> </p>
+                               
                             </div>
                         </div>
                         <div class="slider slider-single">
@@ -284,6 +284,32 @@
                                             </p>
                                         </div>
                                         <span class="offer-price">$25</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>BBQ CHICKEN WINGS</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$10</span>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="offer-item">
+                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
+                                        <div>
+                                            <h3>BBQ CHICKEN WINGS</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                            </p>
+                                        </div>
+                                        <span class="offer-price">$10</span>
                                     </div>
                                 </div>
                                 <!-- end col -->
@@ -845,17 +871,17 @@
                                 <h3>Contact Us</h3>
                                 <p>
                                     <i class="fa fa-map-signs" aria-hidden="true"></i>
-                                    <span>6 E Esplanade, St Albans VIC 3021, Australia</span>
+                                    <span>1194 Weston Rd, York, ON M6M 4P4, Canada</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                     <span>
-									+91 80005 89080 
+									+14162433034
 								</span>
                                 </p>
                                 <p>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span><a href="#">support@foodfunday.com</a></span>
+                                    <span><a href="#">hewaad@yahoo.ca</a></span>
                                 </p>
                             </div>
                             <!-- end footer-box-c -->
@@ -867,12 +893,16 @@
 
                                 <ul>
                                     <li>
-                                        <p>Monday - Thursday </p>
-                                        <span> 11:00 AM - 9:00 PM</span>
+                                        <p>Monday - Wednesday </p>
+                                        <span> 11:00 AM - 11:00 PM</span>
                                     </li>
                                     <li>
-                                        <p>Friday - Saturday </p>
-                                        <span>  11:00 AM - 5:00 PM</span>
+                                        <p>Thursday - Saturday </p>
+                                        <span>  11:00 AM - 12:00 AM</span>
+                                    </li>
+                                    <li>
+                                        <p>Sunday </p>
+                                        <span>  12:00 PM - 11:00 PM</span>
                                     </li>
                                 </ul>
                             </div>
