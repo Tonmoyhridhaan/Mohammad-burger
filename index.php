@@ -20,9 +20,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive2.css">
     <!-- color -->
     <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
 
@@ -109,6 +111,7 @@
     <!-- end banner -->
 
     <div id="about" class="about-main pad-top-100 pad-bottom-100">
+        <section class="food_section layout_padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -136,6 +139,7 @@
             <!-- end row -->
         </div>
         <!-- end container -->
+    </section>
     </div>
 
     <div class="special-menu pad-top-100 parallax">
@@ -230,235 +234,717 @@
     </div>
     <!-- end special-menu -->
 
-    <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title text-center">
-						Our Menu 	
-					</h2>
-                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                    </div>
-                    <div class="tab-menu">
-                        <div class="slider slider-nav">
-                            <div class="tab-title-menu ml-5">
-                                <h2>PIZZAS</h2>
-                                
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>BURGERS</h2>
-                               
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>SIDES</h2>
-                               
-                            </div>
-                            <div class="tab-title-menu">
-                                <h2>DRINKS</h2>
-                               
-                            </div>
-                        </div>
-                        <div class="slider slider-single">
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>GARLIC BREAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$8.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-02.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MIXED SALAD</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$25</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>BBQ CHICKEN WINGS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>BBQ CHICKEN WINGS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>BBQ CHICKEN WINGS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-05.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$15</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-06.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>SPICY MEATBALLS</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$6.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHOCOLATE FUDGECAKE</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$4.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$10</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>MEAT FEAST PIZZA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$12.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$9.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                    <div class="offer-item">
-                                        <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
-                                        <div>
-                                            <h3>CHICKEN TIKKA MASALA</h3>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
-                                            </p>
-                                        </div>
-                                        <span class="offer-price">$5.5</span>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end tab-menu -->
-                </div>
-                <!-- end col -->
+    <div id="menu" class=" pad-top-100 pad-bottom-100">
+        <section class="food_section layout_padding">
+            <div class="container">
+                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                    <h2 class="block-title text-center">
+                    Our Menu 	
+                </h2>
             </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
+              <ul class="filters_menu">
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".burger">Burger</li>
+                <li data-filter=".pizza">Pizza</li>
+                <li data-filter=".pasta">Pasta</li>
+                <li data-filter=".fries">Fries</li>
+              </ul>
+        
+              <div class="filters-content">
+                <div class="row grid">
+                  <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f1.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Pizza
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $20
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f2.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Burger
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $15
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f3.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Pizza
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $17
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all pasta">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f4.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Pasta
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $18
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all fries">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f5.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            French Fries
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $10
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f6.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Pizza
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $15
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f7.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Tasty Burger
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $12
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f8.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Tasty Burger
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $14
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-4 all pasta">
+                    <div class="box2">
+                      <div>
+                        <div class="img-box2">
+                          <img src="images/f9.png" alt="">
+                        </div>
+                        <div class="detail-box2">
+                          <h5>
+                            Delicious Pasta
+                          </h5>
+                          <p>
+                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
+                          </p>
+                          <div class="options">
+                            <h6>
+                              $10
+                            </h6>
+                            <a href="">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                                <g>
+                                  <g>
+                                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                                  </g>
+                                </g>
+                                <g>
+                                  <g>
+                                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                                  </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-box2">
+                <a href="">
+                  View More
+                </a>
+              </div>
+            </div>
+          </section>
     </div>
     <!-- end menu -->
 
@@ -809,8 +1295,9 @@
         
         <!-- end footer-news -->
         <div class="footer-box pad-top-70">
+            
             <div class="container">
-                <div class="row">
+                <div class="row"  style="margin-top: 50px">
                     <div class="footer-in-main">
                         <div class="footer-logo">
                             <div class="text-center">
@@ -923,7 +1410,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h6 class="copy-title"> Copyright &copy; 2017 Food Funday is powered by <a href="#" target="_blank"></a> </h6>
+                            <h6 class="copy-title"> Copyright &copy; 2024 York Burger is powered by <a href="#" target="_blank"></a> TermsBrain</h6>
                         </div>
                     </div>
                     <!-- end row -->
@@ -943,6 +1430,27 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
+    <!-- jQery -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
 </body>
 
 </html>
