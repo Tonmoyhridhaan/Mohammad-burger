@@ -12,11 +12,12 @@
 
 </head>
 <body>
+
 	<div class="box">
 		<form autocomplete="off" method="POST">
-			<div class="imgBox">
-				<img src="images/favicon.ico">
-			</div>
+			<h2  style="align-content: center; border-radius: 75%;">
+				<img style="border-radius: 75%;" src="images/icon.JPG" height="70px" width="75px">
+			</h2>
 			<h2>Sign in</h2>
 			<div class="inputBox">
 				<input type="text" required="required" name="username">
@@ -38,13 +39,17 @@
 		if(isset($_POST['submit'])){
 			$user = $_POST['username'];
 			$pass = md5(sha1($_POST['password']));
-
+			
 			include "connection.php";
 			$sql  = "SELECT * FROM admins WHERE username = '$user' AND password = '$pass'";
 			$result = mysqli_query($con, $sql);
 			$row = mysqli_fetch_array($result);
-
+			
 			if($row){
+				session_start();
+				
+				$_SESSION['id'] = $row['id'];
+
 				echo "<script type='text/javascript'>
 					alert('Login Successful');
 				</script>";
