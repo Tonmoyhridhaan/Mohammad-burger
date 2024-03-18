@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['id'])) {
+    header('Location: ../logout.php');
+    exit;
+}
+
 session_start();
 include '../connection.php';
 

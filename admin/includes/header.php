@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/x-icon" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/favicon-32x32.png">
 
     <title>Administrator</title>
 
@@ -82,13 +82,13 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-yelp fa-fw"></i> Services<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-yelp fa-fw"></i> Items<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="addService.php"><i class="fa fa-plus fa-fw"></i>Add Service</a>
+                                        <a href="addService.php"><i class="fa fa-plus fa-fw"></i>Add item</a>
                                     </li>
                                     <li>
-                                        <a href="serviceList.php"><i class="fa fa-list fa-fw"></i>Service lists</a>
+                                        <a href="serviceList.php"><i class="fa fa-list fa-fw"></i>Item lists</a>
                                     </li>
                                 </ul>
                             </li>
