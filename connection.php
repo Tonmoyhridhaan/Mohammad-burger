@@ -7,9 +7,5 @@
     $dbname = "york_burger";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
-    if($con){
-        echo  "connected";
-    }else{
-        echo "not connected";
-    }
+
 ?>
