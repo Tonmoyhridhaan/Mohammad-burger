@@ -85,7 +85,7 @@
                                 <a href="#"><i class="fa fa-yelp fa-fw"></i> Items<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="addService.php"><i class="fa fa-plus fa-fw"></i>Add item</a>
+                                        <a href="addItem.php"><i class="fa fa-plus fa-fw"></i>Add item</a>
                                     </li>
                                     <li>
                                         <a href="serviceList.php"><i class="fa fa-list fa-fw"></i>Item lists</a>

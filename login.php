@@ -42,18 +42,20 @@
 			
 			include "connection.php";
 			$sql  = "SELECT * FROM admins WHERE username = '$user' AND password = '$pass'";
-			$result = mysqli_query($con, $sql);
-			$row = mysqli_fetch_array($result);
 			
-			if($row){
+			$result = mysqli_query($con, $sql);
+			
+			$row = mysqli_fetch_assoc($result);
+			
+			if(strcmp($user,$row['username'])==0 && strcmp($pass, $row['password']) == 0) {
+			
 				session_start();
-				
-				$_SESSION['id'] = $row['id'];
-
+				$_SESSION['id']=$row['id'];
 				echo "<script type='text/javascript'>
 					alert('Login Successful');
+					window.location.href = 'admin/admin.php';
 				</script>";
-				header('Location: admin/admin.php');
+				
 			}else{
 				echo "<script type='text/javascript'>
 						document.getElementById('error').innerHTML = 'wrong username or password';
