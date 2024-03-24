@@ -57,7 +57,7 @@ include '../connection.php';
                 </form>
                 <?php
                     if(isset($_POST['submit'])){
-                        $name = $_POST['name'];
+                        $item = $_POST['name'];
                         $price = $_POST['price'];
                         $ing = $_POST['ingredients'];
                         $cat = $_POST['category'];
@@ -74,7 +74,7 @@ include '../connection.php';
                         echo "<br>";
                         
 
-                        $query = "INSERT INTO items(name,price,ingredients,category,image,status) VALUES('$name', $price,'$ing','$cat','$final_name',0)";
+                        $query = "INSERT INTO items(name,price,ingredients,category,image,status) VALUES('$item', $price,'$ing','$cat','$final_name',0)";
                         echo $query;
                         if(mysqli_query($con, $query)){
                             move_uploaded_file($_FILES["image"]["tmp_name"], "../images/$final_name");

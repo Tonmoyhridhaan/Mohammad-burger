@@ -42,7 +42,7 @@ include_once('includes/header.php');
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Services <a href="addService.php" class="btn btn-primary">Add Service</a></h1>
+            <h1 class="page-header">Services <a href="addItem.php" class="btn btn-primary">Add Item</a></h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -52,17 +52,19 @@ include_once('includes/header.php');
             <thead>
                 <th>ID</th>
                 <th>Name</th>
+                <th>description</th>
                 <th>Price</th>
                 <th>Action</th>
             </thead>
             <tbody>
                 <?php
-                $query = "SELECT * FROM services";
+                $query = "SELECT * FROM items";
                 $sql = mysqli_query($con, $query);
                 while ($row = mysqli_fetch_array($sql)) { ?>
                     <tr>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['ingredients'] ?></td>
                         <td><?php echo $row['price'] ?></td>
                         <td>
                             <a class="btn btn-primary" href="editService.php?id=<?php echo $row['id'] ?>">Edit</a>

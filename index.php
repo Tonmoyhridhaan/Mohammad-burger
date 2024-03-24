@@ -243,32 +243,47 @@
                 </h2>
             </div>
               <ul class="filters_menu">
-                <li class="active" data-filter="*">All</li>
+                <!-- <li class="active" data-filter="*">All</li> -->
                 <li data-filter=".burger">Burger</li>
                 <li data-filter=".pizza">Pizza</li>
                 <li data-filter=".pasta">Pasta</li>
-                <li data-filter=".fries">Fries</li>
+                <li data-filter=".fries">Sides</li>
                 <li data-filter=".drinks">Drinks</li>
               </ul>
         
               <div class="filters-content">
                 <div class="row grid">
-                  <div class="col-sm-6 col-lg-4 all pizza">
+                  <?php
+                    include 'connection.php';
+                    $sql = "SELECT * FROM items WHERE status=1";
+                    $result = mysqli_query($con, $sql);
+                   
+                      // output data of each row
+                      while($row = mysqli_fetch_array($result)) {
+                        $id = $row['id'];
+                        $name = $row['name'];
+                        $price = $row['price'];
+                        $image = $row['image'];
+                        $ingredients = $row['ingredients'];
+                        $category = $row['category'];
+                  ?>
+                  
+                  <div class="col-sm-6 col-lg-4 all  <?php echo $category; ?>">
                     <div class="box2">
                       <div>
                         <div class="img-box2">
-                          <img src="images/f1.png" alt="">
+                          <img src="images/<?php echo $image; ?>" alt="">
                         </div>
                         <div class="detail-box2">
-                          <h5>
-                            Delicious Pizza
-                          </h5>
+                          <h6>
+                          <?php echo $name; ?>
+                          </h6>
                           <p>
-                            Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
-                          </p>
+                          <?php echo nl2br($ingredients); ?>
+                        </p>
                           <div class="options">
                             <h6>
-                              $20
+                              Order Now
                             </h6>
                             <a href="">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -329,6 +344,7 @@
                       </div>
                     </div>
                   </div>
+                  <?php }  ?>
                   <div class="col-sm-6 col-lg-4 all burger">
                     <div class="box2">
                       <div>
