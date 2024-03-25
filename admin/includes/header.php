@@ -88,7 +88,7 @@
                                         <a href="addItem.php"><i class="fa fa-plus fa-fw"></i>Add item</a>
                                     </li>
                                     <li>
-                                        <a href="serviceList.php"><i class="fa fa-list fa-fw"></i>Item lists</a>
+                                        <a href="itemList.php"><i class="fa fa-list fa-fw"></i>Item lists</a>
                                     </li>
                                 </ul>
                             </li>

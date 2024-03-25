@@ -52,8 +52,9 @@ include_once('includes/header.php');
             <thead>
                 <th>ID</th>
                 <th>Name</th>
+                <th>Catergory</th>
                 <th>description</th>
-                <th>Price</th>
+                <th>Image</th>
                 <th>Action</th>
             </thead>
             <tbody>
@@ -64,10 +65,11 @@ include_once('includes/header.php');
                     <tr>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
-                        <td><?php echo $row['ingredients'] ?></td>
-                        <td><?php echo $row['price'] ?></td>
+                        <td><?php echo $row['category'] ?></td>
+                        <td><?php echo nl2br($row['ingredients']) ?></td>
+                        <td><img src="../images/<?php echo $row['image']?>" height="100px" width="100px" alt=""></td>
                         <td>
-                            <a class="btn btn-primary" href="editService.php?id=<?php echo $row['id'] ?>">Edit</a>
+                            <a class="btn btn-primary" href="editItem.php?id=<?php echo $row['id'] ?>">Edit</a>
                             <!-- Trigger the modal with a button -->
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal<?php echo $row['id'] ?>">Delete</button>
 
@@ -85,7 +87,7 @@ include_once('includes/header.php');
                                     <p>Do you really want to delete <b><?php echo $row['name'] ?></b>?</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="deleteService.php?id=<?php echo $row['id'] ?>" class="btn btn-success"> Yes</a>
+                                    <a href="deleteItem.php?id=<?php echo $row['id'] ?>" class="btn btn-success"> Yes</a>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                                 </div>

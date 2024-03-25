@@ -26,12 +26,9 @@ include '../connection.php';
                         <label for="usr">Name:</label>
                         <input type="text" class="form-control" name="name" >
                     </div>
+                   
                     <div class="form-group">
-                        <label for="pwd">Price:</label>
-                        <input type="number" class="form-control" name="price" >
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Ingredients:</label>
+                        <label for="pwd">Pricing:</label>
                         <textarea type="text" rows="5" class="form-control" name="ingredients" > </textarea>
                     </div>
                     <div class="form-group">
@@ -58,7 +55,7 @@ include '../connection.php';
                 <?php
                     if(isset($_POST['submit'])){
                         $item = $_POST['name'];
-                        $price = $_POST['price'];
+                    
                         $ing = $_POST['ingredients'];
                         $cat = $_POST['category'];
 
@@ -74,8 +71,8 @@ include '../connection.php';
                         echo "<br>";
                         
 
-                        $query = "INSERT INTO items(name,price,ingredients,category,image,status) VALUES('$item', $price,'$ing','$cat','$final_name',0)";
-                        echo $query;
+                        $query = "INSERT INTO items(name,ingredients,category,image,status) VALUES('$item','$ing','$cat','$final_name',1)";
+                       
                         if(mysqli_query($con, $query)){
                             move_uploaded_file($_FILES["image"]["tmp_name"], "../images/$final_name");
                             echo "<span class='text-success'>Service Added Successfully</span>";
