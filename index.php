@@ -153,7 +153,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title color-white text-center"> Today's Special </h2>
-                        <h5 class="title-caption text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia,nostrud exercitation ullamco. </h5>
+                        <h5 class="title-caption text-center"> Here is our special menu for today. </h5>
                     </div>
                     <div class="special-box">
                         <div id="owl-demo">
@@ -161,9 +161,13 @@
                                 <a href="#" class="item-hover">
                                     <div class="item-info">
                                         <div class="headline">
-                                            SALMON STEAK
+                                            FISH AND CHIPS
                                             <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
+                                            <div class="dit-line">
+                                              1 pc fish $3.75
+                                              1 pc fish & chip $6.49
+                                              2 pc fish & chips $9.49
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -175,9 +179,15 @@
                                 <a href="#" class="item-hover">
                                     <div class="item-info">
                                         <div class="headline">
-                                            ITALIAN PIZZA
+                                            SPECIAL PIZZA
                                             <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
+                                            <div class="dit-line">
+                                              1 Medium Pizza
+                                              3 Toppings
+                                              14 Chicken Wings
+                                              2 Pops
+                                              $27.99
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -189,44 +199,22 @@
                                 <a href="#" class="item-hover">
                                     <div class="item-info">
                                         <div class="headline">
-                                            VEG. ROLL
+                                            DOUBLE CHEESE BACON BURGER
                                             <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
+                                            <div class="dit-line">
+                                              Combo $13.49
+                                              Burger Only $9.49
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
                                 <div class="item-img">
-                                    <img src="images/special-menu-3.jpg" alt="sp-menu">
+                                
+                                    <img src="images/IMG_1927.jpg" alt="sp-menu">
                                 </div>
                             </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            SALMON STEAK
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-1.jpg" alt="sp-menu">
-                                </div>
-                            </div>
-                            <div class="item item-type-zoom">
-                                <a href="#" class="item-hover">
-                                    <div class="item-info">
-                                        <div class="headline">
-                                            VEG. ROLL
-                                            <div class="line"></div>
-                                            <div class="dit-line">Lorem ipsum dolor sit amet, consectetur adip aliqua. Ut enim ad minim venia.</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="item-img">
-                                    <img src="images/special-menu-2.jpg" alt="sp-menu">
-                                </div>
-                            </div>
+                            
+                            
                         </div>
                     </div>
                     <!-- end special-box -->
@@ -373,7 +361,7 @@
                         <h2 class="block-title text-center">
 						Our Gallery	
 					</h2>
-                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available </p>
+                        <p class="title-caption text-center">Some pictures of our gallery </p>
                     </div>
                     <div class="gal-container clearfix">
                         <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
@@ -659,8 +647,8 @@
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-a">
                                 <h3>About Us</h3>
-                                <p>Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes.</p>
-                                <ul class="socials-box footer-socials pull-left">
+                                <p>Welcome to York Burger and Pizza, your go-to destination for delectable halal food in Canada.</p>
+                                <!-- <ul class="socials-box footer-socials pull-left">
                                     <li>
                                         <a href="#">
                                             <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
@@ -686,7 +674,7 @@
                                             <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
 
                             </div>
                             <!-- end footer-box-a -->
@@ -696,10 +684,10 @@
                             <div class="footer-box-b">
                                 <h3>New Menu</h3>
                                 <ul>
-                                    <li><a href="#">Italian Bomba Sandwich</a></li>
-                                    <li><a href="#">Double Dose of Pork Belly</a></li>
-                                    <li><a href="#">Spicy Thai Noodles</a></li>
-                                    <li><a href="#">Triple Truffle Trotters</a></li>
+                                    <li><a href="#menu">Popcorn Chicken</a></li>
+                                    <li><a href="#menu">Grilled Chicken Poutine</a></li>
+                                    <li><a href="#menu">D-Cheese Bacon Burger</a></li>
+                                    <li><a href="#menu">Big Y Pizza & Wings special</a></li>
                                 </ul>
                             </div>
                             <!-- end footer-box-b -->
