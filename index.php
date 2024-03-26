@@ -96,6 +96,7 @@
                             <p>Experience the Fusion of Authenticity and Taste, Where Halal Meets Gourmet in Every Bite!</p>
                             <div class="book-btn">
                                 <a onclick="window.location.href='tel:+1-416-243-3034'" class="table-btn hvr-underline-from-center">Call for order</a>
+                                <a href="order.php" class="table-btn hvr-underline-from-center">Order Online</a>
                             </div>
                         </div>
                         <!-- end banner-cell -->
@@ -118,11 +119,15 @@
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title"> About Us </h2>
                         <h3>IT STARTED, QUITE SIMPLY, LIKE THIS...</h3>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco. </p>
+                        Welcome to York Burger and Pizza, your go-to destination for delectable halal food in Canada. Situated in the heart of our vibrant community, we pride ourselves on offering a mouthwatering selection of burgers and pizzas crafted with the finest ingredients, all prepared in accordance with halal dietary standards.
 
-                        <p> Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, Aenean commodo ligula eget dolor penatibu set magnis is parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, pellentesque eu, pretium quis, sem. quat massa quis enim. Donec vitae sapien ut libero venenatis fauci Nullam quis ante. Etiam sit amet rci eget eros. </p>
+                        At York Burger and Pizza, we believe that great food starts with quality ingredients. 
+                        
+                        That's why we source only the freshest meats, vegetables, and spices to create our signature dishes. Whether you're craving a juicy burger piled high with toppings or a savory pizza bursting with flavor, our diverse menu has something to satisfy every appetite.
 
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco. </p>
+                        But it's not just about the food; it's about the experience. Our cozy and inviting atmosphere provides the perfect backdrop for enjoying a meal with family and friends. From our friendly staff to our commitment to exceptional service, we strive to ensure that every visit to York Burger and Pizza is a memorable one.
+
+                        Join us at York Burger and Pizza and experience the tantalizing flavors of our halal-certified cuisine. From classic favorites to innovative creations, there's always something delicious waiting for you here.
                     </div>
                 </div>
                 <!-- end col -->
@@ -243,7 +248,7 @@
                 </h2>
             </div>
               <ul class="filters_menu">
-                <!-- <li class="active" data-filter="*">All</li> -->
+                
                 <li class="active" data-filter=".burger">Burger</li>
                 <li data-filter=".pizza">Pizza</li>
                 <li data-filter=".chicken">Chicken</li>
@@ -285,7 +290,7 @@
                             <h6>
                               Order Now
                             </h6>
-                            <a href="">
+                            <a href="order.php">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                 <g>
                                   <g>
@@ -601,12 +606,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
                         <h2 class="block-title"> Catering </h2>
-                        <h3>IT STARTED, QUITE SIMPLY, LIKE THIS...</h3>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco. </p>
+                        <h3>LET'S TALK ABOUT OUR CATERING SERVICES...</h3>
+                        With a diverse selection of mouthwatering options, our catering menu is designed to satisfy every palate. Treat your guests to an array of gourmet burgers, from classic cheeseburgers to specialty creations loaded with premium toppings. Or indulge in our freshly baked pizzas, featuring a variety of tantalizing combinations that are sure to please any crowd.
 
-                        <p> Aenean commodo ligula eget dolor aenean massa. Cum sociis nat penatibu set magnis dis parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, Aenean commodo ligula eget dolor penatibu set magnis is parturient montes, nascetur ridiculus mus. quam felisorat, ultricies nec, pellentesque eu, pretium quis, sem. quat massa quis enim. Donec vitae sapien ut libero venenatis fauci Nullam quis ante. Etiam sit amet rci eget eros. </p>
+                        Our experienced team is dedicated to making your event unforgettable. From customized menu planning to seamless delivery and setup, we handle every detail with precision and care. With York Burger and Pizza catering, you can relax and enjoy your event while we take care of the rest.
 
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia, nostrud exercitation ullamco. </p>
+                        Impress your guests with the irresistible flavors of our halal-certified cuisine. Contact us today to discuss your catering needs and let us help you create an unforgettable dining experience for your next event.
                     </div>
                 </div>
                 <!-- end col -->
@@ -710,8 +715,8 @@
                                 <p>
                                     <i class="fa fa-mobile" aria-hidden="true"></i>
                                     <span>
-									+14162433034
-								</span>
+                                      +14162433034
+                                    </span>
                                 </p>
                                 <p>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
