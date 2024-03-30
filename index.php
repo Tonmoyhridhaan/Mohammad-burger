@@ -662,6 +662,17 @@
                 <label class="btn btn-secondary active" onclick="filterProducts('pizza')">
                   <input type="radio" name="cat" id="pizza" autocomplete="off" > Pizza
                 </label>
+
+                <label class="btn btn-secondary active" onclick="filterProducts('chicken')">
+                  <input type="radio" name="cat" id="chicken" autocomplete="off" > Chicken
+                </label>
+                <label class="btn btn-secondary active" onclick="filterProducts('sides')">
+                  <input type="radio" name="cat" id="sides" autocomplete="off" > Sides
+                </label>
+                <label class="btn btn-secondary active" onclick="filterProducts('drinks')">
+                  <input type="radio" name="cat" id="drinks" autocomplete="off" > Drinks
+                </label>
+               
                
               </div>
               <div id="productList">
@@ -783,30 +794,32 @@
         addOnsHTML += `
           <p style="font-weight: 900; font-size: large;"> Toppings </p>
           <hr>
+          <form>
           <div class="form-group">
             <label for="addon1">Tomato</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
             <label for="addon2">Bacon</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
             <label for="addon2">Black Olives</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
             <label for="addon2">Feta Cheese</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
             <label for="addon2">Chicken</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
             <label for="addon2">Green Olives</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" onclick="onlyOne(this)">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" onclick="onlyOne(this)">
           </div>
+          </form>
           <p style="font-weight: 900; font-size: large;"> Extra </p>
           <hr>
           <div class="form-group">
