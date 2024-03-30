@@ -88,18 +88,18 @@
                                         <a href="addItem.php"><i class="fa fa-plus fa-fw"></i>Add item</a>
                                     </li>
                                     <li>
-                                        <a href="itemList.php"><i class="fa fa-list fa-fw"></i>Item lists</a>
+                                        <a href="itemList.php"><i class="fa fa-list fa-fw"></i>Item list</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-yelp fa-fw"></i> Reviews<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-yelp fa-fw"></i> Pricing<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="addReview.php"><i class="fa fa-plus fa-fw"></i>Add Review</a>
+                                        <a href="addPrice.php"><i class="fa fa-plus fa-fw"></i>Add Price</a>
                                     </li>
                                     <li>
-                                        <a href="reviews.php"><i class="fa fa-list fa-fw"></i>Review lists</a>
+                                        <a href="priceList.php"><i class="fa fa-list fa-fw"></i>Price list</a>
                                     </li>
                                 </ul>
                             </li>

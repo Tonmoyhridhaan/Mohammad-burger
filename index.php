@@ -18,6 +18,7 @@
     <meta name="author" content="">
 
     <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style2.css">
@@ -35,6 +36,21 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .modal-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-body {
+        overflow: auto;
+        max-height: calc(100vh - 60px);
+    }
+    .modal-header, .modal-footer {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+    </style>
 
 </head>
 
@@ -615,6 +631,8 @@
 
 
  <!-- Button trigger modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -622,12 +640,12 @@
   </button>
 
   <!-- Main Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="5" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+      <div class="modal-content" style="overflow-y:scroll;">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Product List & Cart</h5>
+          <p class="modal-title" id="exampleModalLabel">Product List & Cart</p>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -636,42 +654,55 @@
           <div class="row">
             <!-- Left Part - Product List -->
             <div class="col-lg-7">
-              <h6>Product List</h6>
+              <p class="bg-info" style="font-weight: 900; font-size: large;">Item List<p>
               <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active" onclick="filterProducts('Category 1')">
-                  <input type="radio" name="cat" id="category1" autocomplete="off" checked> Category 1
+              <label class="btn btn-secondary" onclick="filterProducts('burger')">
+                  <input type="radio" name="cat" id="burger" autocomplete="off" checked> Burger
                 </label>
-                <label class="btn btn-secondary" onclick="filterProducts('Category 2')">
-                  <input type="radio" name="cat" id="category2" autocomplete="off"> Category 2
+                <label class="btn btn-secondary active" onclick="filterProducts('pizza')">
+                  <input type="radio" name="cat" id="pizza" autocomplete="off" > Pizza
                 </label>
+               
               </div>
               <div id="productList">
                 <!-- Product list will be dynamically populated here -->
-                <div class="product-item" data-category="Category 1" data-name="Product 1" data-price="10">
+                <?php
+                  $qry = "SELECT * FROM prices WHERE status=1";
+                  $r = mysqli_query($con, $qry);
+                  while ($row = mysqli_fetch_array($r)) {
+                    echo '<div class="product-item" data-category="' . $row['category'] . '" data-name="' . $row['name'] . '" data-price="' . $row['price'] . '">
+                            <img height="45px" width= "50px" src="images/' . $row['image'] . '" alt="Product 1" class="img-fluid mb-2">
+                            <span onmouseover="changeBackgroundColor("#e0e0e0")" >' . $row['name'] . ' - <br> <b>$' . $row['price'] . '</b></span>
+                            <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal(\'' . $row['name'] . '\', ' . $row['price'] . ')">+</button>
+                            <hr>
+                          </div>';
+                  }
+                ?>
+                <!-- <div class="product-item" data-category="pizza" data-name="Product 1" data-price="10">
                   <img src="product1.jpg" alt="Product 1" class="img-fluid mb-2">
-                  <span>Product 1 - $10</span>
+                  <span onclick="showAddOnModal('Product 1', 10)">Product 1 - $10</span>
                   <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 1', 10)">+</button>
                 </div>
-                <div class="product-item" data-category="Category 1" data-name="Product 2" data-price="15">
+                <div class="product-item" data-category="pizza" data-name="Product 2" data-price="15">
                   <img src="product2.jpg" alt="Product 2" class="img-fluid mb-2">
                   <span>Product 2 - $15</span>
                   <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 2', 15)">+</button>
                 </div>
-                <div class="product-item" data-category="Category 2" data-name="Product 3" data-price="20" style="display: none;">
+                <div class="product-item" data-category="burger" data-name="Product 3" data-price="20" style="display: none;">
                   <img src="product3.jpg" alt="Product 3" class="img-fluid mb-2">
                   <span>Product 3 - $20</span>
                   <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 3', 20)">+</button>
                 </div>
-                <div class="product-item" data-category="Category 2" data-name="Product 4" data-price="25" style="display: none;">
+                <div class="product-item" data-category="burger" data-name="Product 4" data-price="25" style="display: none;">
                   <img src="product4.jpg" alt="Product 4" class="img-fluid mb-2">
                   <span>Product 4 - $25</span>
                   <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 4', 25)">+</button>
-                </div>
+                </div> -->
               </div>
             </div>
             <!-- Right Part - Cart -->
             <div class="col-lg-5">
-              <h6>Cart</h6>
+              <p class="bg-info" style="font-weight: 900; font-size: large;">Cart<p>
               <div id="cart">
                 <!-- Cart items will be dynamically populated here -->
               </div>
@@ -679,12 +710,15 @@
               <div id="totalPrice">
                 Total: $0.00
               </div>
+              <hr>
+              <button type="button" class="btn btn-success" onclick="confirmOrder()">Proceed to checkout</button>
+              
             </div>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button>
+         
         </div>
       </div>
     </div>
@@ -719,6 +753,14 @@
 
   <!-- JavaScript to handle dynamic content and interactions -->
   <script>
+    
+    filterProducts('burger');
+    function onlyOne(checkbox) {
+      var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false
+        })
+    }
     let selectedProduct;
     let selectedProductPrice;
 
@@ -733,30 +775,64 @@
       
       // Populate add-on options based on the selected category
       const category = document.querySelector('input[name="cat"]:checked').getAttribute('id');
-      //const category = 'category1';
+      //const category = 'pizza';
       
       let addOnsHTML = '';
       
-      if (category === 'category1') {
+      if (category === 'pizza') {
         addOnsHTML += `
+          <p style="font-weight: 900; font-size: large;"> Toppings </p>
+          <hr>
           <div class="form-group">
-            <label for="addon1">Add-on 1 for Category 1 ($2.00)</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon1" value="Add-on 1" data-price="2.00">
+            <label for="addon1">Tomato</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
-            <label for="addon2">Add-on 2 for Category 1 ($3.00)</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Add-on 2" data-price="3.00">
+            <label for="addon2">Bacon</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon2">Black Olives</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon2">Feta Cheese</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon2">Chicken</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon2">Green Olives</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <p style="font-weight: 900; font-size: large;"> Extra </p>
+          <hr>
+          <div class="form-group">
+            <label for="addon2">Chicken Sausage - ($2.50)</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken Sausage" data-price="2.50" onclick="onlyOne(this)">
           </div>
         `;
-      } else if (category === 'category2') {
+      } else if (category === 'burger') {
         addOnsHTML += `
+          <p style="font-weight: 900; font-size: large;"> Sauce </p>
+          <hr>
           <div class="form-group">
-            <label for="addon3">Add-on 1 for Category 2 ($1.50)</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="Add-on 3" data-price="1.50">
+            <label for="addon3">No sauce</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="No sauce" data-price="0.00" onclick="onlyOne(this)">
           </div>
           <div class="form-group">
-            <label for="addon4">Add-on 2 for Category 2 ($2.50)</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Add-on 4" data-price="2.50">
+            <label for="addon4">BBQ</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="BBQ" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon4">Hot</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Hot" data-price="0.00" onclick="onlyOne(this)">
+          </div>
+          <div class="form-group">
+            <label for="addon4">Medium</label>
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Medium" data-price="0.00" onclick="onlyOne(this)">
           </div>
         `;
       }
@@ -792,6 +868,7 @@
         <div class="mb-2">
           <span>${itemDescription} - $${totalPrice.toFixed(2)}</span>
           <button class="btn btn-sm btn-danger ml-2" onclick="removeFromCart(this)">x</button>
+          <hr>
         </div>
       `;
       cart.appendChild(cartItem);
