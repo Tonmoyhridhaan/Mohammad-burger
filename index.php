@@ -683,7 +683,7 @@
                   while ($row = mysqli_fetch_array($r)) {
                     echo '<div class="product-item" data-category="' . $row['category'] . '" data-name="' . $row['name'] . '" data-price="' . $row['price'] . '">
                             <img height="45px" width= "50px" src="images/' . $row['image'] . '" alt="Product 1" class="img-fluid mb-2">
-                            <span onmouseover="changeBackgroundColor("#e0e0e0")" >' . $row['name'] . ' - <br> <b>$' . $row['price'] . '</b></span>
+                            <span onmouseover="changeBackgroundColor("#e0e0e0")" >' . $row['name'] . ' <br> <b>$' . $row['price'] . '</b></span>
                             <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal(\'' . $row['name'] . '\', ' . $row['price'] . ')">+</button>
                             <hr>
                           </div>';
@@ -722,12 +722,16 @@
                 Total: $0.00
               </div>
               <hr>
-              <button type="button" class="btn btn-success" onclick="confirmOrder()">Proceed to checkout</button>
-              
+              <form id="dataForm" action="orderProcess.php" method="post">
+                <input type="hidden" id="order" name="order">
+                <input type="hidden" id="price" name="price">
+                <button type="button" class="btn btn-success" onclick="confirmOrder()">Proceed to checkout</button>
+              </form>
             </div>
           </div>
         </div>
         <div class="modal-footer">
+         
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
          
         </div>
@@ -796,35 +800,44 @@
           <hr>
           <form>
           <div class="form-group">
-            <label for="addon1">Tomato</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon1">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" name="addon"> Tomato
+            </label>
           </div>
           <div class="form-group">
-            <label for="addon2">Bacon</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" name="addon">
+            Bacon
+            </label>
           </div>
           <div class="form-group">
-            <label for="addon2">Black Olives</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" name="addon"> Black Olives
+            </label>
           </div>
           <div class="form-group">
-            <label for="addon2">Feta Cheese</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" name="addon"> Feta Cheese
+            </label>
           </div>
           <div class="form-group">
-            <label for="addon2">Chicken</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" name="addon"> Chicken
+            </label>
           </div>
           <div class="form-group">
-            <label for="addon2">Green Olives</label>
-            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" name="addon"> Green Olives
+            </label>
           </div>
           </form>
           <p style="font-weight: 900; font-size: large;"> Extra </p>
           <hr>
           <div class="form-group">
-            <label for="addon2">Chicken Sausage - ($2.50)</label>
-            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken Sausage" data-price="2.50" onclick="onlyOne(this)">
+            <label for="addon2">
+            <input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken Sausage" data-price="2.50">
+            Chicken Sausage - ($2.50)
+            </label>
           </div>
         `;
       } else if (category === 'burger') {
@@ -915,10 +928,18 @@
         let orderDetails = '';
         let totalPrice = 0;
         cartItems.forEach(item => {
+          
+          item.textContent = item.textContent.replace(/\s*x\s*$/, '');
+          console.log(item.textContent.trim());
           orderDetails += `${item.textContent.trim()}\n`;
           totalPrice += parseFloat(item.textContent.match(/\$([\d.]+)/)[1]);
         });
-        alert(`Your order has been confirmed!\n\n${orderDetails}\nTotal Price: $${totalPrice.toFixed(2)}`);
+
+        //alert(`Your order has been confirmed!\n\n${orderDetails}\nTotal Price: $${totalPrice.toFixed(2)}`);
+        document.getElementById("order").value = orderDetails;
+        document.getElementById("price").value = totalPrice;
+        document.getElementById("dataForm").submit();
+       
       }
     }
 
