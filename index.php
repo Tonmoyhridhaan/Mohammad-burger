@@ -18,7 +18,7 @@
     <meta name="author" content="">
 
     <!-- Bootstrap CSS -->
-    
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style2.css">
@@ -61,7 +61,7 @@
     <div id="site-header mb-5">
         <header id="header" class="header-block-top">
             <div class="container">
-                <div class="row">
+                <div class="">
                     <div class="main-menu">
                         <!-- navbar -->
                         <nav class="navbar navbar-default" id="mainNav">
