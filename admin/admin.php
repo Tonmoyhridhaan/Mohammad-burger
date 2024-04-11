@@ -13,13 +13,13 @@ include_once('includes/header.php');
 
 
 // Fetch the number of customers
-$sqlCustomers = "SELECT COUNT(*) as numCustomers FROM clients";
+$sqlCustomers = "SELECT COUNT(*) as numCustomers FROM items";
 $resultCustomers = mysqli_query($con, $sqlCustomers);
 $rowCustomers = mysqli_fetch_assoc($resultCustomers);
 $numCustomers = $rowCustomers['numCustomers'];
 
 // // Fetch the number of staff members
-$sqlStaff = "SELECT COUNT(*) as numStaff FROM services";
+$sqlStaff = "SELECT COUNT(*) as numStaff FROM prices";
 $resultStaff = mysqli_query($con, $sqlStaff);
 $rowStaff = mysqli_fetch_assoc($resultStaff);
 $numStaff = $rowStaff['numStaff'];
@@ -52,11 +52,11 @@ include_once('includes/header.php');
             <div class="panel-heading">
                 <div class="row">
                     <div class="col-xs-3">
-                        <i class="fa fa-user fa-5x"></i>
+                        <i class="fa fa-reorder fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><?php echo $numCustomers; ?></div>
-                        <div>Customers</div>
+                        <div>Display Items</div>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@ include_once('includes/header.php');
                     </div>
                     <div class="col-xs-9 text-right">
                         <div class="huge"><?php echo $numStaff; ?></div>
-                        <div>Services</div>
+                        <div>Menu Items</div>
                     </div>
                 </div>
             </div>

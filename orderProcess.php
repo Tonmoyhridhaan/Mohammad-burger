@@ -33,7 +33,7 @@ if(!isset($_POST['order'])) {
                     <div class="title">
                         <div class="row">
                             <div class="col"><h4><b>Selected Items</b></h4></div>
-                            <div class="col align-self-center text-right text-muted">3 items</div>
+                            <div class="col align-self-center text-right text-muted"><?php echo count($items)?> items</div>
                         </div>
                     </div>    
     <?php
@@ -82,10 +82,23 @@ if(!isset($_POST['order'])) {
                 <div class="col text-right">&dollar; <?php echo $tprice?></div>
             </div>
             <form>
-                <p>SHIPPING</p>
-                <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                <p>GIVE CODE</p>
-                <input id="code" placeholder="Enter your code">
+                
+                <input type="text" id="name" placeholder="Enter your name" name="name" required>
+                <input type="text" id="contact" placeholder="Enter your contact" name="contact" required>
+                <input type="text" id="location" placeholder="Enter your location" name="location" required>
+                <br/><br/>
+                <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">Option 1
+                </label>
+                </div>
+                <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">Option 2
+                </label>
+                </div>
+
+
             </form>
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                 <div class="col">TOTAL PRICE</div>
