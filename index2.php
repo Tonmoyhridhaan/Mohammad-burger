@@ -1166,12 +1166,16 @@
                         <!-- end col -->
                     </div>
                     <!-- end footer-in-main -->
+                    
                 </div>
                 <!-- end row -->
+                <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.107956378865!2d-79.49641721578733!3d43.6875189757098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37d039b6ef7d%3A0xeca38ab0bb142e84!2sYork%20Burger%20%26%20Pizza%20(Halal)!5e0!3m2!1sen!2sbd!4v1709116848081!5m2!1sen!2sbd"  frameborder="0" style="border:0;padding-top:20px; width: 100%; height: 250px;" allowfullscreen></iframe>
+                    </div>
+
             </div>
-            <div class="ml-5 mr-5 text-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.107956378865!2d-79.49641721578733!3d43.6875189757098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37d039b6ef7d%3A0xeca38ab0bb142e84!2sYork%20Burger%20%26%20Pizza%20(Halal)!5e0!3m2!1sen!2sbd!4v1709116848081!5m2!1sen!2sbd" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            
+            <br>
             <br>
             <!-- end container -->
             <div id="copyright" class="copyright-main">

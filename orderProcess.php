@@ -51,12 +51,15 @@ if(!isset($_POST['order'])) {
         $full_name_lines = explode("-", $full_name);
         $title = $full_name_lines[0];
         $desc = $full_name_lines[1];
-
+        
         $query = "SELECT * FROM prices WHERE name LIKE '$title%'";
+       
         
         $sql = mysqli_query($con, $query);
-        $row = mysqli_fetch_assoc($sql);
+        $row = mysqli_fetch_array($sql);
+       
         $image = $row['image'];
+        
     ?>
     <div class="row border-top border-bottom">
         <div class="row main align-items-center">

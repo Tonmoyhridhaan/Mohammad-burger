@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2024 at 06:21 AM
+-- Generation Time: Apr 13, 2024 at 08:11 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -224,36 +224,36 @@ INSERT INTO `prices` (`id`, `name`, `price`, `category`, `image`, `status`) VALU
 (38, 'Chicken Tender - 03 pcs ', 5.99, 'chicken', '7d09a3def524c6f1bffd42a6fe6189cf.png', 1),
 (39, 'Chicken Tender - 05 pcs ', 9.99, 'chicken', '98d811f717a7bcd7d797dc46f33dba63.png', 1),
 (40, 'Chicken Tender - 10 pcs', 17.99, 'chicken', '8782df49e0e8535dcb319e1f153abb72.png', 1),
-(41, 'Popcorn Chicken Combo ', 5.99, 'chicken', 'b47657ca41aa78beee013ff902c8c94b.png', 1),
+(41, 'Popcorn Chicken - Combo ', 5.99, 'chicken', 'b47657ca41aa78beee013ff902c8c94b.png', 1),
 (42, '10 pcs chicken box - (large fries, coleslaw & 2L pop) ', 28.99, 'chicken', '71e39beda7b6a938c1c4154bb3a0b15a.png', 1),
 (43, '04 pcs chicken box - (fries, coleslaw & pop) ', 10.99, 'chicken', 'eae12c5e6030467baac74ac25c0c5d13.png', 1),
-(44, '03 pcs chicken ', 5.99, 'chicken', '1fb783e5b209578bd3bb60d718e717f1.png', 1),
-(45, '10 pcs chicken ', 18.99, 'chicken', '6a86a5512817b19852e311502f8c9dde.png', 1),
-(46, '21 pcs chicken ', 35.99, 'chicken', 'f56ade046e9acaf04de9d1727e3ef252.png', 1),
-(47, '1 pc fish ', 3.75, 'chicken', '1994dcf0a5fd6e078f45d1ba2eab8519.png', 1),
-(48, '1 pc fish & chip ', 6.49, 'chicken', '3cf140e6aef735d83cabbe39ac2980f4.png', 1),
-(49, '2 pc fish & chips ', 9.49, 'chicken', 'ad7ced6a7120d76dc85162360597ffa5.png', 1),
-(50, 'Chicken Nuggets - 6 pcs Combo', 5.99, 'chicken', '3fe8219bbc44e9a430671238ce903abf.png', 1),
+(44, '03 pcs chicken -', 5.99, 'chicken', '1fb783e5b209578bd3bb60d718e717f1.png', 1),
+(45, '10 pcs chicken -', 18.99, 'chicken', '6a86a5512817b19852e311502f8c9dde.png', 1),
+(46, '21 pcs chicken - ', 35.99, 'chicken', 'f56ade046e9acaf04de9d1727e3ef252.png', 1),
+(47, '1 pc fish -', 3.75, 'chicken', '1994dcf0a5fd6e078f45d1ba2eab8519.png', 1),
+(48, '1 pc fish & chip -', 6.49, 'chicken', '3cf140e6aef735d83cabbe39ac2980f4.png', 1),
+(49, '2 pc fish & chips -', 9.49, 'chicken', 'ad7ced6a7120d76dc85162360597ffa5.png', 1),
+(50, 'Chicken Nuggets - 6 pcs Combo ', 5.99, 'chicken', '3fe8219bbc44e9a430671238ce903abf.png', 1),
 (51, 'Chicken Nuggets - 6 pcs only ', 2.99, 'chicken', '1d09c0b58580688627653ff1719bb464.png', 1),
-(52, 'Gyro Combo ', 10.99, 'chicken', '09e6b78c52ded496f79f3fe6c8ef84c8.png', 1),
-(53, 'Gyro Only ', 7.99, 'chicken', '0bbffc0fddf48cdfa8720fd13911b005.png', 1),
-(54, 'Poutine Small ', 6.49, 'sides', '46dbaca4b3b5237926b8c9ce32c480e0.png', 1),
-(55, 'Poutine Large ', 7.75, 'sides', '61714492dcbf4a63efd66537cf0305dd.png', 1),
-(56, 'Grilled Chicken Poutine Large ', 9.99, 'sides', '44404963e61058e670217e8de4dc6686.png', 1),
-(57, 'Onion Rings Small ', 3.99, 'sides', '31dc95b268e269234d9cf27ad1a82a1b.png', 1),
-(58, 'Onion Rings Large ', 4.49, 'sides', '46fe75ce531f77bb4e91373c0eb0a37d.png', 1),
-(59, 'Philly Chicken Steak combo ', 11.99, 'sides', 'c6f20c3e2139e16caafa282bd1cb2eb2.png', 1),
-(60, 'Philly Chicken Steak only', 7.99, 'sides', 'c3658aa041805f35565f9b660fc75b8d.png', 1),
-(61, 'Potato Wedges Small ', 4.99, 'sides', '77e79bcbdcda7de2d849d49ac8c5f39e.png', 1),
-(62, 'Potato Wedges Large', 6.49, 'sides', '55d34467f545f0b6d7fa99fad29146b8.png', 1),
-(63, 'Grilled Chicken Salad ', 8.49, 'sides', 'd6ab9cd468d6f22b89e473436125018d.png', 1),
-(64, 'French Fries Small ', 3.25, 'sides', '3bd6bb4a3312cc768f32e98eba2f3f65.png', 1),
-(65, 'French Fries  Large ', 4.49, 'sides', '02f82eff5a638d93e197ea3fba804f2f.png', 1),
-(66, '2L POP ', 3.25, 'drinks', 'f39df4764a14c6cdaa809735cd089546.png', 1),
-(67, 'Can ', 1.1, 'drinks', '80572ee6284e03dcdfaf5d51d8f1f97f.png', 1),
-(68, 'Water ', 1.49, 'drinks', '7ed30fdcd5c0f232f929dcf48c91aa3f.png', 1),
-(69, 'Juice ', 1.49, 'drinks', 'c7732f6f0acb3f3caccca35c44dffe34.png', 1),
-(70, 'Shake ', 5.49, 'drinks', '76ca416ea2da06ec556de029140a995b.png', 1);
+(52, 'Gyro Combo -', 10.99, 'chicken', '09e6b78c52ded496f79f3fe6c8ef84c8.png', 1),
+(53, 'Gyro Only -', 7.99, 'chicken', '0bbffc0fddf48cdfa8720fd13911b005.png', 1),
+(54, 'Poutine Small -', 6.49, 'sides', '46dbaca4b3b5237926b8c9ce32c480e0.png', 1),
+(55, 'Poutine Large -', 7.75, 'sides', '61714492dcbf4a63efd66537cf0305dd.png', 1),
+(56, 'Grilled Chicken Poutine Large -', 9.99, 'sides', '44404963e61058e670217e8de4dc6686.png', 1),
+(57, 'Onion Rings - Small', 3.99, 'sides', '31dc95b268e269234d9cf27ad1a82a1b.png', 1),
+(58, 'Onion Rings - Large', 4.49, 'sides', '46fe75ce531f77bb4e91373c0eb0a37d.png', 1),
+(59, 'Philly Chicken Steak - combo ', 11.99, 'sides', 'c6f20c3e2139e16caafa282bd1cb2eb2.png', 1),
+(60, 'Philly Chicken Steak - Steak only', 7.99, 'sides', 'c3658aa041805f35565f9b660fc75b8d.png', 1),
+(61, 'Potato Wedges - Small ', 4.99, 'sides', '77e79bcbdcda7de2d849d49ac8c5f39e.png', 1),
+(62, 'Potato Wedges - Large', 6.49, 'sides', '55d34467f545f0b6d7fa99fad29146b8.png', 1),
+(63, 'Grilled Chicken - Salad ', 8.49, 'sides', 'd6ab9cd468d6f22b89e473436125018d.png', 1),
+(64, 'French Fries - Small ', 3.25, 'sides', '3bd6bb4a3312cc768f32e98eba2f3f65.png', 1),
+(65, 'French Fries - Large ', 4.49, 'sides', '02f82eff5a638d93e197ea3fba804f2f.png', 1),
+(66, '2L POP -', 3.25, 'drinks', 'f39df4764a14c6cdaa809735cd089546.png', 1),
+(67, 'Can -', 1.1, 'drinks', '80572ee6284e03dcdfaf5d51d8f1f97f.png', 1),
+(68, 'Water -', 1.49, 'drinks', '7ed30fdcd5c0f232f929dcf48c91aa3f.png', 1),
+(69, 'Juice -', 1.49, 'drinks', 'c7732f6f0acb3f3caccca35c44dffe34.png', 1),
+(70, 'Shake -', 5.49, 'drinks', '76ca416ea2da06ec556de029140a995b.png', 1);
 
 --
 -- Indexes for dumped tables

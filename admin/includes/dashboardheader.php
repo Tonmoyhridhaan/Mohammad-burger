@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/x-icon" href="../images/favicon-32x32.png">
-
+    <meta http-equiv="refresh" content="30">
 
     <title>Administrator</title>
 
