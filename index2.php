@@ -18,8 +18,8 @@
     <meta name="author" content="">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Site CSS -->
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
@@ -36,6 +36,21 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+      .modal-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-body {
+        overflow: auto;
+        max-height: calc(100vh - 60px);
+    }
+    .modal-header, .modal-footer {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+    </style>
 
 </head>
 
@@ -71,6 +86,7 @@
                                     <li><a href="#gallery">Gallery</a></li>
                                     <li><a href="#catering">Catering</a></li>
                                     <li><a href="#footer">Contact us</a></li>
+                                    <!-- <li><a data-toggle="modal" data-target="#exampleModal">Order</a></li> -->
                                 </ul>
                             </div>
                             <!-- end nav-collapse -->
@@ -97,7 +113,7 @@
                             <p>Experience the Fusion of Authenticity and Taste, Where Halal Meets Gourmet in Every Bite!</p>
                             <div class="book-btn">
                                 <a onclick="window.location.href='tel:+1-416-243-3034'" class="table-btn hvr-underline-from-center">Call for order</a>
-                                <a class="table-btn hvr-underline-from-center" >Order Online</a>
+                                <a class="table-btn hvr-underline-from-center" data-toggle="modal" data-target="#exampleModal">Order Online</a>
                             </div>
                         </div>
                         <!-- end banner-cell -->
@@ -279,7 +295,7 @@
                             <h6>
                               Order Now
                             </h6>
-                            <a href="">
+                            <a data-toggle="modal" data-target="#exampleModal"">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                                 <g>
                                   <g>
@@ -614,80 +630,415 @@
     <!-- end reservations-main -->
 
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+ <!-- Button trigger modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-        
-        <section class="food_section layout_padding">
-           
-              <ul class="filters_menu">
-                
-                <li class="active" data-filter=".burger">Burger</li>
-                <li data-filter=".pizza">Pizza</li>
-                <li data-filter=".chicken">Chicken</li>
-                <li data-filter=".sides">Sides</li>
-                <li data-filter=".drinks">Drinks</li>
-              </ul>
-        
-              <div class="">
-                <div class="grid">
-                  <?php
-                    include 'connection.php';
-                    $sql = "SELECT * FROM items WHERE status=1";
-                    $result = mysqli_query($con, $sql);
-                   
-                      // output data of each row
-                      while($row = mysqli_fetch_array($result)) {
-                        $id = $row['id'];
-                        $name = $row['name'];
-                        
-                        $image = $row['image'];
-                        $ingredients = $row['ingredients'];
-                        $category = $row['category'];
-                  ?>
-                  
-                  <div class="col-sm-6 col-lg-3 all  <?php echo $category; ?>">
-                    <div class="box2">
-                      <div>
-                        <div class="img-box2">
-                          <img src="images/<?php echo $image; ?>" alt="">
-                        </div>
-                        <div class="detail-box2">
-                          <h6>
-                          <?php echo $name; ?>
-                          </h6>
-                          <p>
-                          <?php echo nl2br($ingredients); ?>
-                        </p>
-                          <div class="options">
-                            <h6>
-                              Order Now
-                            </h6>
-                            <a href="">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch modal
+  </button>
 
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <?php }  ?>
+  <!-- Main Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+      <div class="modal-content" style="overflow-y:scroll;">
+        <div class="modal-header">
+          <p class="modal-title" id="exampleModalLabel">Product List & Cart</p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- Left Part - Product List -->
+            <div class="col-lg-7">
+              <p class="bg-info" style="font-weight: 900; font-size: large;">Item List<p>
+              <div class="btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary" onclick="filterProducts('burger')">
+                  <input type="radio" name="cat" id="burger" autocomplete="off" checked> Burger
+                </label>
+                <label class="btn btn-secondary active" onclick="filterProducts('pizza')">
+                  <input type="radio" name="cat" id="pizza" autocomplete="off" > Pizza
+                </label>
 
-                </div>
+                <label class="btn btn-secondary active" onclick="filterProducts('chicken')">
+                  <input type="radio" name="cat" id="chicken" autocomplete="off" > Chicken
+                </label>
+                <label class="btn btn-secondary active" onclick="filterProducts('sides')">
+                  <input type="radio" name="cat" id="sides" autocomplete="off" > Sides
+                </label>
+                <label class="btn btn-secondary active" onclick="filterProducts('drinks')">
+                  <input type="radio" name="cat" id="drinks" autocomplete="off" > Drinks
+                </label>
+               
+               
               </div>
-              <div class="btn-box2">
-                <a href="">
-                  Order Now
-                </a>
+              <div id="productList">
+                <!-- Product list will be dynamically populated here -->
+                <?php
+                  $qry = "SELECT * FROM prices WHERE status=1";
+                  $r = mysqli_query($con, $qry);
+                  while ($row = mysqli_fetch_array($r)) {
+                    echo '<div class="product-item" data-category="' . $row['category'] . '" data-name="' . $row['name'] . '" data-price="' . $row['price'] . '">
+                            <img height="45px" width= "50px" src="images/' . $row['image'] . '" alt="Product 1" class="img-fluid mb-2">
+                            <span onmouseover="changeBackgroundColor("#e0e0e0")" >' . $row['name'] . ' <br> <b>$' . $row['price'] . '</b></span>
+                            <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal(\'' . $row['name'] . '\', ' . $row['price'] . ',' . $row['id'] . ')">+</button>
+                            <hr>
+                          </div>';
+                  }
+                ?>
+                <!-- <div class="product-item" data-category="pizza" data-name="Product 1" data-price="10">
+                  <img src="product1.jpg" alt="Product 1" class="img-fluid mb-2">
+                  <span onclick="showAddOnModal('Product 1', 10)">Product 1 - $10</span>
+                  <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 1', 10)">+</button>
+                </div>
+                <div class="product-item" data-category="pizza" data-name="Product 2" data-price="15">
+                  <img src="product2.jpg" alt="Product 2" class="img-fluid mb-2">
+                  <span>Product 2 - $15</span>
+                  <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 2', 15)">+</button>
+                </div>
+                <div class="product-item" data-category="burger" data-name="Product 3" data-price="20" style="display: none;">
+                  <img src="product3.jpg" alt="Product 3" class="img-fluid mb-2">
+                  <span>Product 3 - $20</span>
+                  <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 3', 20)">+</button>
+                </div>
+                <div class="product-item" data-category="burger" data-name="Product 4" data-price="25" style="display: none;">
+                  <img src="product4.jpg" alt="Product 4" class="img-fluid mb-2">
+                  <span>Product 4 - $25</span>
+                  <button class="btn btn-sm btn-primary ml-2" onclick="showAddOnModal('Product 4', 25)">+</button>
+                </div> -->
               </div>
             </div>
-          </section>
-          
+            <!-- Right Part - Cart -->
+            <div class="col-lg-5">
+              <p class="bg-info" style="font-weight: 900; font-size: large;">Cart<p>
+              <div id="cart">
+                <!-- Cart items will be dynamically populated here -->
+              </div>
+              <hr>
+              <div id="totalPrice">
+                Total: $0.00
+              </div>
+              <hr>
+              <form id="dataForm" action="orderProcess.php" method="post">
+                <input type="hidden" id="order" name="order">
+                <input type="hidden" id="price" name="price">
+                <button type="button" class="btn btn-success" onclick="confirmOrder()">Proceed to checkout</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+         
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Sub-Modal for Add-ons -->
+  <div class="modal" id="addOnModal" role="dialog" aria-labelledby=""
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Select Add-ons</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="addonOptions">
+          <!-- Add-on options will be dynamically populated here based on the selected category -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="addToCartWithAddOns()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript to handle dynamic content and interactions -->
+  <script>
+    
+    filterProducts('burger');
+    function onlyOne(checkbox) {
+      var checkboxes = document.getElementsByName('check')
+        checkboxes.forEach((item) => {
+            if (item !== checkbox) item.checked = false
+        })
+    }
+    let selectedProduct;
+    let selectedProductPrice;
+
+    // Function to show add-on modal
+    function showAddOnModal(productName, price, id) {
+      console.log(id);
+      selectedProduct = productName;
+      selectedProductPrice = price;
+      
+      // Clear previous add-on options
+      document.getElementById('addonOptions').innerHTML = '';
+      
+      // Populate add-on options based on the selected category
+      const category = document.querySelector('input[name="cat"]:checked').getAttribute('id');
+      //const category = 'pizza';
+      
+      let addOnsHTML = '';
+      
+      
+      if (category === 'pizza') {
+        addOnsHTML += `
+          <p style="font-weight: 900; font-size: large;"> Toppings </p>
+          
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon1"> Tomato </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon1" value="Tomato" data-price="0.00" name="addon"> </td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Bacon </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Bacon" data-price="0.00" name="addon"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Black Olives </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Black Olives" data-price="0.00" name="addon"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Feta Cheese </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Feta Cheese" data-price="0.00" name="addon"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Chicken </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Chicken" data-price="0.00" name="addon"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Green Olives </label></td>
+                    <td><input type="radio" class="form-check-input addon-checkbox" id="addon2" value="Green Olives" data-price="0.00" name="addon"></td>
+                </tr>
+            </tbody>
+          </table>
+          
+          <p style="font-weight: 900; font-size: large;"> Extra </p>
+          
+          <table class="table "> 
+            <tbody>
+                <tr>
+                    <td><label for="addon1"> Chicken Sausage - ($2.50) </label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Chicken Sausage" data-price="2.50"> </td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Hot Sauce - ($1.50) </label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Hot Sauce" data-price="1.50"> </td>
+                </tr>
+                <tr>
+                    <td><label for="addon1"> Tomato Sauce - ($1.50) </label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon2" value="Tomato Sauce" data-price="1.50"> </td>
+                </tr>
+            </tbody>
+          </table>
+         
+        `;
+      } else if (category === 'burger') {
+        addOnsHTML += `
+          <p style="font-weight: 900; font-size: large;"> Combo Item </p>
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon3">French Fry</label></td>
+                    <td><input type="radio" name="same" class="form-check-input addon-checkbox" id="addon3" value="No sauce" data-price="0.00" onclick="onlyOne(this)"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon4">Fish Fry</label></td>
+                    <td><input type="radio" name="same" class="form-check-input addon-checkbox" id="addon4" value="BBQ" data-price="0.00" onclick="onlyOne(this)"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="addon4">Potato Wedges</label></td>
+                    <td><input type="radio" name="same" class="form-check-input addon-checkbox" id="addon4" value="Hot" data-price="0.00" onclick="onlyOne(this)"></td>
+                </tr>
+            </tbody>
+          </table>
+          <p style="font-weight: 900; font-size: large;"> Extras </p>
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon3">Cheese Patty - ($3.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="Cheese Patty" data-price="3.50" onclick="onlyOne(this)"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon4">BBQ Sauce - ($2.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="BBQ Sauce" data-price="2.50" onclick="onlyOne(this)"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="addon4">Hot Sauce - ($1.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Hot Sauce" data-price="1.50" onclick="onlyOne(this)"></td>
+                </tr>
+            </tbody>
+          </table>
+        `;
+      } else if (category === 'chicken') {
+        addOnsHTML += `
+        <p style="font-weight: 900; font-size: large;"> Extras </p>
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon3">Tomato Sauce - ($2.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="Cheese Patty" data-price="2.50" onclick="onlyOne(this)"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon4">BBQ Sauce - ($2.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="BBQ Sauce" data-price="2.50" onclick="onlyOne(this)"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="addon4">Hot Sauce - ($1.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Hot Sauce" data-price="1.50" onclick="onlyOne(this)"></td>
+                </tr>
+            </tbody>
+          </table>
+        `;
+      }
+        else if (category === 'sides') {
+        addOnsHTML += `
+        <p style="font-weight: 900; font-size: large;"> Extras </p>
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon3">Tomato Sauce - ($2.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="Cheese Patty" data-price="2.50" onclick="onlyOne(this)"></td>
+                </tr>
+                <tr>
+                    <td><label for="addon4">BBQ Sauce - ($2.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="BBQ Sauce" data-price="2.50" onclick="onlyOne(this)"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="addon4">Hot Sauce - ($1.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon4" value="Hot Sauce" data-price="1.50" onclick="onlyOne(this)"></td>
+                </tr>
+            </tbody>
+          </table>
+        `;
+        }
+        else if (category === 'drinks') {
+        addOnsHTML += `
+        <p style="font-weight: 900; font-size: large;"> Extras </p>
+          <table class="table table-striped"> 
+            <tbody>
+                <tr>
+                    <td><label for="addon3">Ice Cube - ($1.50)</label></td>
+                    <td><input type="checkbox" class="form-check-input addon-checkbox" id="addon3" value="Ice Cube" data-price="1.50" onclick="onlyOne(this)"></td>
+                </tr>
+            </tbody>
+          </table>
+        `;
+      }
+      
+      document.getElementById('addonOptions').innerHTML = addOnsHTML;
+      
+      $('#addOnModal').modal('show');
+    }
+
+    // Function to add product to cart with selected add-ons
+    function addToCartWithAddOns() {
+      const selectedAddOns = [];
+      const selectedAddOnInputs = document.querySelectorAll('.addon-checkbox:checked');
+      selectedAddOnInputs.forEach(input => {
+        selectedAddOns.push({
+          name: input.value,
+          price: parseFloat(input.getAttribute('data-price'))
+        });
+      });
+
+      let itemDescription = selectedProduct;
+      let totalPrice = selectedProductPrice;
+
+      selectedAddOns.forEach(addOn => {
+        itemDescription += ` + ${addOn.name}`;
+        totalPrice += addOn.price;
+      });
+
+      const cart = document.getElementById('cart');
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart-item');
+      cartItem.innerHTML = `
+        <div class="mb-2">
+          <span>${itemDescription} - $${totalPrice.toFixed(2)}</span>
+          <button class="btn btn-sm btn-danger ml-2" onclick="removeFromCart(this)">x</button>
+          <hr>
+        </div>
+      `;
+      cart.appendChild(cartItem);
+      updateTotalPrice();
+      $('#addOnModal').modal('hide');
+    }
+
+    // Function to remove product from cart
+    function removeFromCart(button) {
+      button.parentElement.parentElement.remove();
+      updateTotalPrice();
+    }
+
+    // Function to update total price
+    function updateTotalPrice() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      let totalPrice = 0;
+      cartItems.forEach(item => {
+        const price = parseFloat(item.textContent.match(/\$([\d.]+)/)[1]);
+        totalPrice += price;
+      });
+      document.getElementById('totalPrice').textContent = `Total: $${totalPrice.toFixed(2)}`;
+    }
+
+    // Function to confirm order
+    function confirmOrder() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      if (cartItems.length === 0) {
+        alert('Your cart is empty!');
+      } else {
+        let orderDetails = '';
+        let totalPrice = 0;
+        cartItems.forEach(item => {
+          
+          item.textContent = item.textContent.replace(/\s*x\s*$/, '');
+          console.log(item.textContent.trim());
+          orderDetails += `${item.textContent.trim()}\n`;
+          totalPrice += parseFloat(item.textContent.match(/\$([\d.]+)/)[1]);
+        });
+
+        //alert(`Your order has been confirmed!\n\n${orderDetails}\nTotal Price: $${totalPrice.toFixed(2)}`);
+        document.getElementById("order").value = orderDetails;
+        document.getElementById("price").value = totalPrice;
+        document.getElementById("dataForm").submit();
+       
+      }
+    }
+
+    // Function to filter products by category
+    function filterProducts(category) {
+      const productItems = document.querySelectorAll('.product-item');
+      productItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (itemCategory === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  
 
     <div id="footer" class="footer-main">
         <!-- <div class="footer-news pad-top-100 pad-bottom-70 parallax">

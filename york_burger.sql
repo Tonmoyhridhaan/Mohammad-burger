@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2024 at 02:47 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Apr 13, 2024 at 06:21 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `york_burger`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `addons`
+--
+
+CREATE TABLE `addons` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` float NOT NULL,
+  `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -94,6 +107,62 @@ INSERT INTO `items` (`id`, `name`, `ingredients`, `category`, `image`, `status`)
 (33, 'Big Y Pizza&wings special 4', '1 XL pizza\r\n3 Toppings\r\n20 Chicken Wings\r\n4 Pops\r\n$35.99\r\n\r\n2nd Pizza with fries\r\n$13.99\r\nFree fries', 'pizza', '0fe895e9813baf812da16be86c9c0454.png', 1),
 (34, 'Walk-In Special', '2 Small Pizzas (4 toppings each, 2 Pops) $14.99\r\n2 Medium Pizzas (4 toppings each, 2 Pops) $17.49\r\n2 Large Pizzas (4 toppings each, 4 Pops) $21.49\r\n2 X-Large Pizzas (4 toppings each, 4 Pops) $28.49', 'pizza', '3ee2bbb3557c6716cf0f4b3508847ff5.png', 1),
 (35, 'Drinks', '2L POP $3.25\r\nCan $1.10\r\nWater $1.49\r\nJuice $1.49\r\nShake $5.49', 'drinks', '71e4529d304bd129df260a0343e57b40.png', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orderLine`
+--
+
+CREATE TABLE `orderLine` (
+  `id` int(11) NOT NULL,
+  `item` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `orderId` int(11) NOT NULL,
+  `description` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orderLine`
+--
+
+INSERT INTO `orderLine` (`id`, `item`, `orderId`, `description`) VALUES
+(4, 'Fish Burger ', 4, ' Combo + BBQ '),
+(5, 'Big Y Pizza&wings special 2 ', 4, ' 1 Medium Pizza, 3 Toppings, 14 Chicken Wings, 2 Pops + Green Olives + Chicken Sausage '),
+(6, 'Fish Burger ', 5, ' Combo + BBQ '),
+(7, 'Pizza Go #1 ', 5, ' 2 Small Pizzas, 4 Toppings each, 2 Pops or Fries + Tomato + Chicken Sausage '),
+(8, 'Pizza Go #1 ', 6, ' 2 Small Pizzas, 4 Toppings each, 2 Pops or Fries + Tomato + Chicken Sausage + Hot Sauce '),
+(9, 'Fish Burger ', 7, ' Combo + BBQ + Cheese Patty '),
+(10, 'Pizza Go #1 ', 7, ' 2 Small Pizzas, 4 Toppings each, 2 Pops or Fries + Black Olives + Chicken Sausage + Hot Sauce '),
+(11, '2L POP  + Ice Cube ', 7, ' '),
+(12, 'Water  + Ice Cube ', 7, ' ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `customerName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customerContact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `customerLocation` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` float NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `date`, `time`, `customerName`, `customerContact`, `customerLocation`, `price`, `type`, `status`) VALUES
+(4, '2024-04-12', '07:33:56', 'Tonmoy', '1234', 'Chattogram, Bangladesh', 38.74, 'cod', 0),
+(5, '2024-04-12', '07:50:18', 'Hridhaan', '1234', 'Chattogram, Bangladesh', 35.74, 'cod', 0),
+(6, '2024-04-13', '05:53:48', 'Tonmoy', '1234', 'Chattogram, Bangladesh', 28.99, 'cod', 0),
+(7, '2024-04-13', '06:19:47', 'Mohammad', '01919191', 'Lalkhan Bazar', 48.48, 'cod', 0);
 
 -- --------------------------------------------------------
 
@@ -191,6 +260,13 @@ INSERT INTO `prices` (`id`, `name`, `price`, `category`, `image`, `status`) VALU
 --
 
 --
+-- Indexes for table `addons`
+--
+ALTER TABLE `addons`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_addons` (`item`);
+
+--
 -- Indexes for table `admins`
 --
 ALTER TABLE `admins`
@@ -203,6 +279,19 @@ ALTER TABLE `items`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `orderLine`
+--
+ALTER TABLE `orderLine`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_order` (`orderId`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `prices`
 --
 ALTER TABLE `prices`
@@ -211,6 +300,12 @@ ALTER TABLE `prices`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `addons`
+--
+ALTER TABLE `addons`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `admins`
@@ -225,10 +320,38 @@ ALTER TABLE `items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
+-- AUTO_INCREMENT for table `orderLine`
+--
+ALTER TABLE `orderLine`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `prices`
 --
 ALTER TABLE `prices`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `addons`
+--
+ALTER TABLE `addons`
+  ADD CONSTRAINT `fk_addons` FOREIGN KEY (`item`) REFERENCES `prices` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `orderLine`
+--
+ALTER TABLE `orderLine`
+  ADD CONSTRAINT `fk_order` FOREIGN KEY (`orderId`) REFERENCES `orders` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
