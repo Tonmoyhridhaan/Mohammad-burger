@@ -9,7 +9,7 @@ if (!isset($_SESSION['id'])) {
 include '../connection.php';
 
 
-include_once('includes/dashboardheader.php');
+
 
 
 // Fetch the number of customers
