@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 13, 2024 at 08:11 AM
+-- Generation Time: Apr 20, 2024 at 06:54 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -34,6 +34,15 @@ CREATE TABLE `addons` (
   `category` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `item` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `addons`
+--
+
+INSERT INTO `addons` (`id`, `name`, `price`, `category`, `item`) VALUES
+(1, 'French Fries', 0, 'free', 1),
+(2, 'Fish Fries', 0, 'free', 1),
+(3, 'BBQ sauce', 2.5, 'extra', 1);
 
 -- --------------------------------------------------------
 
@@ -106,7 +115,37 @@ INSERT INTO `items` (`id`, `name`, `ingredients`, `category`, `image`, `status`)
 (32, 'Big Y Pizza&wings special 3', '1 Lrg Pizza\r\n3 Toppings\r\n20 Chicken Wings\r\n3 Pops\r\n$31.99\r\n\r\n2nd Pizza with regular\r\n$10.99\r\nFree Fries', 'pizza', 'eb4f0bcab65275f78049de15f0252ee4.png', 1),
 (33, 'Big Y Pizza&wings special 4', '1 XL pizza\r\n3 Toppings\r\n20 Chicken Wings\r\n4 Pops\r\n$35.99\r\n\r\n2nd Pizza with fries\r\n$13.99\r\nFree fries', 'pizza', '0fe895e9813baf812da16be86c9c0454.png', 1),
 (34, 'Walk-In Special', '2 Small Pizzas (4 toppings each, 2 Pops) $14.99\r\n2 Medium Pizzas (4 toppings each, 2 Pops) $17.49\r\n2 Large Pizzas (4 toppings each, 4 Pops) $21.49\r\n2 X-Large Pizzas (4 toppings each, 4 Pops) $28.49', 'pizza', '3ee2bbb3557c6716cf0f4b3508847ff5.png', 1),
-(35, 'Drinks', '2L POP $3.25\r\nCan $1.10\r\nWater $1.49\r\nJuice $1.49\r\nShake $5.49', 'drinks', '71e4529d304bd129df260a0343e57b40.png', 1);
+(35, 'Drinks', '2L POP $3.25\r\nCan $1.10\r\nWater $1.49\r\nJuice $1.49\r\nShake $5.49', 'drinks', '71e4529d304bd129df260a0343e57b40.png', 1),
+(36, 'Canadian Pizza', ' Mozzarella Cheese, \r\nSauce, \r\nPepperoni, \r\nMushrooms, \r\nBacon\r\n\r\n$30.99', 'specialpizza', 'df833588a6f42ab94d1905765fa32094.JPG', 1),
+(37, 'Hawaiian Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nChicken,\r\nPineapple\r\n\r\n$29.99', 'specialpizza', '420aacd272f1210a707b55f32815c315.JPG', 1),
+(38, 'Deluxe Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nBeef Bacon,\r\nPepperoni, \r\nMushrooms, \r\nGreen Peppers,\r\nSliced tomatoes,\r\nOnions,\r\nSpanish\r\n\r\n$33.99', 'specialpizza', 'a79c37b682d2b9e6b817ff2ead9f1449.JPG', 1),
+(39, 'York Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nGrilled Chicken,\r\nMushrooms, \r\nRed Roasted Peppers,\r\nOnions,\r\nBlack Olive,\r\n\r\n$33.99', 'specialpizza', 'd6edaba5ccee95f64bb2d984beca860b.JPG', 1),
+(40, 'Montreal-Style Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nBeef Bacon,\r\nPepperoni, \r\nMushrooms, \r\nGreen Peppers,\r\n\r\n$31.99', 'specialpizza', '3a72a228d6ed51780f9c8a2391777b40.JPG', 1),
+(41, 'Mexican Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nGround Beef,\r\nBeef Bacon, \r\nGreen Peppers,\r\nOnions,\r\nHot Pepper\r\n\r\n$30.99 ', 'specialpizza', '83ed4a84ce2783566f7f76274dfb0f54.JPG', 1),
+(42, 'Supreme Pizza', 'Mozzarella Cheese, \r\nSauce, \r\nPepperoni, \r\nGround Beef,\r\nSausage\r\nMushrooms, \r\nGreen Peppers,\r\nOnions,\r\n\r\n$32.49', 'specialpizza', '9ab1e818f1990d40f0914a3e95d2f5bb.JPG', 1),
+(43, 'Meat Lover Pizza', 'Pepperoni, \r\nSausage\r\nBeef Bacon, \r\nGround Beef,\r\nChicken\r\n\r\n\r\n$36.99', 'specialpizza', 'bcacde306e119391ff0448750076bd9b.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dateTime` datetime NOT NULL,
+  `hasRead` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `message`, `dateTime`, `hasRead`) VALUES
+(4, 'Corneli', 'co.tick2001@yahoo.com', 'You take order for 12 person? I have a Birthday program and want home delivery.', '2024-04-20 18:50:24', 0);
 
 -- --------------------------------------------------------
 
@@ -253,7 +292,15 @@ INSERT INTO `prices` (`id`, `name`, `price`, `category`, `image`, `status`) VALU
 (67, 'Can -', 1.1, 'drinks', '80572ee6284e03dcdfaf5d51d8f1f97f.png', 1),
 (68, 'Water -', 1.49, 'drinks', '7ed30fdcd5c0f232f929dcf48c91aa3f.png', 1),
 (69, 'Juice -', 1.49, 'drinks', 'c7732f6f0acb3f3caccca35c44dffe34.png', 1),
-(70, 'Shake -', 5.49, 'drinks', '76ca416ea2da06ec556de029140a995b.png', 1);
+(70, 'Shake -', 5.49, 'drinks', '76ca416ea2da06ec556de029140a995b.png', 1),
+(72, 'Canadian Pizza -', 30.99, 'specialpizza', '5844a4f87a0bbe598e44888886513db1.JPG', 1),
+(73, 'Hawaiian Pizza - ', 29.99, 'specialpizza', 'aa0e13c99a05d4a72bbdbd9a890e60d8.JPG', 1),
+(74, 'Deluxe Pizza -', 33.99, 'specialpizza', 'd06b7271a9a261d10e663d656e350781.JPG', 1),
+(75, 'York Pizza -', 33.99, 'specialpizza', '46b7758084e77c15c4a0c4c680b77025.JPG', 1),
+(76, 'Montreal-Style Pizza -', 31.99, 'specialpizza', '4d3fb7ac1955efa7481afc15b7917c86.JPG', 1),
+(77, 'Mexican Pizza -\r\n', 30.99, 'specialpizza', 'e2ad9282c43245193a55c018f7cbd90f.JPG', 1),
+(78, 'Supreme Pizza -', 32.49, 'specialpizza', 'e9cb8e2a50c5ed399b22379844ee9243.JPG', 1),
+(79, 'Meat Lover Pizza -', 36.99, 'specialpizza', '424b9537630c8504519e40ee0612ee45.jpg', 1);
 
 --
 -- Indexes for dumped tables
@@ -276,6 +323,12 @@ ALTER TABLE `admins`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -305,7 +358,7 @@ ALTER TABLE `prices`
 -- AUTO_INCREMENT for table `addons`
 --
 ALTER TABLE `addons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `admins`
@@ -317,7 +370,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orderLine`
@@ -335,7 +394,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `prices`
 --
 ALTER TABLE `prices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- Constraints for dumped tables

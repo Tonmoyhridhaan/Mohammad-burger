@@ -37,7 +37,7 @@ $numBooking = $rowBooking['numBooking'];
 // $totalTransactions = $rowTransactions['totalTransactions'];
 
 // Include necessary files
-include_once('includes/header.php');
+include_once('includes/dashboardheader.php');
 ?>
 <div id="page-wrapper">
     <div class="row">

@@ -35,6 +35,7 @@ include '../connection.php';
                         <label for="pwd">Category:</label>
                         <select  class="form-control" name="category" >
                                 <option value="pizza">Pizza</option>
+                                <option value="specialpizza">Special Pizza</option>
                                 <option value="burger">Burger</option>
                                 <option value="chicken">Chicken</option>
                                 <option value="sides">Sides</option>
